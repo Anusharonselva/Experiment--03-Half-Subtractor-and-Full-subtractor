@@ -35,20 +35,93 @@ Write the detailed procedure here
 ## Program:
 /*
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: S.ANUSHARON
+RegisterNumber:  212222240010
+
+1.) For HALF SUBTRACTOR:
+
+module half_sub(a,b,diff,b_out);
+
+input a,b;
+
+wire d;
+
+output diff,b_out;
+
+xor (diff,a,b);
+
+not (d,a);
+
+and (b_out,d,b);
+
+endmodule
+
+2.)For FULL SUBTRACTOR:
+
+module full_sub(b_out,diff,a,b,c_in);
+
+output b_out,diff;
+
+input a,b,c_in;
+
+wire w1,w4,w5,w6;
+
+xor (diff,a,b,c_in);
+
+not (w1,a);
+
+and (w4,w1,b);
+
+and (w5,w1,c_in);
+
+and (w6,b,c_in);
+
+or (b_out,w4,w5,w6);
+
+endmodule
+
 */
 
 ## Output:
 
 ## Truthtable
 
+1.for halfsubtractor:
+
+![Screenshot (235)](https://github.com/Anusharonselva/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119405600/4c7943be-42c8-4c94-8175-5bf45267b9cb)
+
+2.For FULL SUBTRACTOR:
+
+
+![Screenshot (236)](https://github.com/Anusharonselva/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119405600/eee11ba1-bd52-44af-bc72-00910510e7e0)
 
 
 ##  RTL realization
 
+1.for halfsubtractor:
+
+
+![Screenshot (237)](https://github.com/Anusharonselva/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119405600/aa19b330-d5aa-47e0-a205-9f63cbcc84f4)
+
+2.For FULL SUBTRACTOR:
+
+![Screenshot (238)](https://github.com/Anusharonselva/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119405600/165c4fb2-30bc-459c-a3e4-a89d323b9911)
+
+
+
 
 ## Timing diagram 
+
+1.for halfsubtractor:
+
+![Screenshot (239)](https://github.com/Anusharonselva/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119405600/9167020b-bcc7-4e8c-90a8-6b6dcaacef7b)
+
+
+2.For FULL SUBTRACTOR:
+
+![Screenshot (240)](https://github.com/Anusharonselva/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119405600/2fe34dcd-fe44-4c4a-8be7-a464d77fb1ee)
+
+
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
